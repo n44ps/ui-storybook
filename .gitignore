@@ -1,0 +1,16 @@
+node_modules
+build
+*.log
+.DS_Store
+.env
+.git
+.jest
+coverage
+.next
+.out
+out
+pkg
+.history
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd

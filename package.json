@@ -1,0 +1,64 @@
+{
+  "name": "ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "tsdx watch",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
+    "test": "jest --passWithNoTests",
+    "format": "prettier-tslint fix '**/*.{ts,tsx}' --write",
+    "coverage": "jest --coverage src",
+    "lint": "tslint -c tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
+    "precommit": "yarn typecheck && lint-staged"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.4",
+    "@babel/plugin-transform-runtime": "7.4.4",
+    "@babel/preset-env": "7.4.4",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@sambego/storybook-styles": "^1.0.0",
+    "@storybook/addon-backgrounds": "^5.0.11",
+    "@storybook/addon-storysource": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@types/jest": "^24.0.13",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "@types/storybook__react": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "husky": "^2.3.0",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.10.0",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "react-svg-loader": "^3.0.1",
+    "storybook-addon-emotion-theme": "^2.1.0",
+    "ts-loader": "^6.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tsdx": "^0.5.9",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@rebass/grid": "^6.0.0",
+    "dayjs": "^1.8.14",
+    "formik": "^1.5.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-feather": "^1.1.6",
+    "react-spring": "^8.0.20",
+    "styled-system": "^4.2.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier-tslint fix --write",
+      "git add"
+    ]
+  }
+}
